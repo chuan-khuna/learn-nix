@@ -4,6 +4,10 @@ services:
       context: .
       dockerfile: ubuntu.Dockerfile
     tty: true
+    volumes:
+      - ./ubuntu-home:/root
+      # override the default nix configuration, enable flakes
+      - ./nix-conf/nix.conf:/etc/nix/nix.conf
 
   nix-os:
     image: nixos/nix:2.26.4
