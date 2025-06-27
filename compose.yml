@@ -1,0 +1,8 @@
+services:
+  ubuntu:
+    image: ubuntu:22.04
+    tty: true
+
+  nix-os:
+    image: nixos/nix:2.26.4
+    tty: true
